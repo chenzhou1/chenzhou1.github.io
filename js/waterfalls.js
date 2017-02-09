@@ -77,7 +77,7 @@ var waterfallsTplFactory = {
       } catch(ex){ } 
     },
         
-    renderList = function (container) {
+    renderList = function () {
       for(var i=0, len=infoList.length; i<len; i++){
         var item = infoList[i];
         sFragmentHtml = itemtplRender(item, true); 
@@ -100,7 +100,7 @@ var waterfallsTplFactory = {
           if (document.body.scrollHeight - document.documentElement.clientHeight - scrollT < 380) {
             var callback = function(data){
               if(data) infoList = data;
-              renderList(container);  
+              renderList();  
             };
       
             getListData(config.columnSetId, config.count, callback);
@@ -145,7 +145,7 @@ var waterfallsTplFactory = {
           var fnName = 'my_jsonp' + Math.random();
           fnName = fnName.replace('.', '');
           window[fnName] = function (json_data) {
-            debugger
+          
             clearTimeout(timer);
             json.success && json.success(json_data);
 
