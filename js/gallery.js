@@ -12,7 +12,7 @@
       config = {
         width: 600,
         height: 450,
-        sTitle: '群众路线实践活动',
+        sTitle: '然然',
         windowDom: window,
         columnIds:[1, 2, 3, 4],
         fields:['id', 'title', 'imgURL'],
